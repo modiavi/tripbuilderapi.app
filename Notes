@@ -1,0 +1,15 @@
+Three models are used in this project
+	Airports, Airlines, Routes
+	
+In order to access the api's use the path 
+http://localhost/my-site/tripbuilderapi.app/api/
+
+In order the access the frontend use
+http://localhost/my-site/tripbuilderapi.app/
+Airports no new or delete constrain ie. post and delete will not work
+	pass sort in querystring e.g. "?sort=Name"
+		sort by Airport_id, Name,Country
+Airlines no new or delete constrain ie. post and delete will not work
+	pass sort in querystring e.g. "?sort=Name"
+		sort by Airline_ID, Name,Country
+Routes - Can perform all CRUD operations iff there is a coresponding airport and airline in airports and airlines table

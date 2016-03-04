@@ -24,3 +24,6 @@ the setup traffic lights.
 
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
+
+## Database Design
+![alt tag](http://tripbuilderapi_db_design.png)

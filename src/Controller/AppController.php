@@ -39,7 +39,7 @@ class AppController extends Controller
      */
 	 
 	 
-	  use \Crud\Controller\ControllerTrait;
+	 /* use \Crud\Controller\ControllerTrait;
 
     public $components = [
         'RequestHandler',
@@ -58,7 +58,7 @@ class AppController extends Controller
             ]
         ]
     ];
-	 
+	 */
 	 
     public function initialize()
     {
