@@ -11,9 +11,8 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 1.Download Entire Project
 
 2.Configure Database
-	1. This project has 3 tables/Models i.e.	Airports, Airlines, Routes and the relation between them is shown below
-
-	![Database Design EER Diagram](/tripbuilderapi_db_design.png)
+	
+	1. This project has 3 tables/Models i.e.	Airports, Airlines, Routes and the relation between them is shown below ![Database Design EER Diagram](/tripbuilderapi_db_design.png)
 
 	2. MySql file for the database tables is included 	[here](/tripbuilderapi_app_table_strucutre.sql)
 
