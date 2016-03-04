@@ -41,10 +41,15 @@ use Cake\Routing\Router;
  *
  */
  
- Router::extensions(['json', 'xml']);
+ //Router::extensions(['json', 'xml']);
 Router::defaultRouteClass('DashedRoute');
 
-	
+	Router::prefix('api', function ($routes) {
+    $routes->extensions(['json', 'xml']);
+    $routes->resources('Airlines');
+	$routes->resources('Airports');
+	$routes->resources('routes');
+});
 Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
@@ -52,9 +57,9 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
 	 
-	$routes->resources('airports');
-	 $routes->resources('airlines');
-	 $routes->resources('routes');
+	//$routes->resources('airports');
+	// $routes->resources('airlines');
+	 //$routes->resources('routes');
 	
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 

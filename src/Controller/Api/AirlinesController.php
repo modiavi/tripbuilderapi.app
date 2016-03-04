@@ -3,17 +3,17 @@ namespace App\Controller\Api;
 
 use App\Controller\Api\AppController;
 
-class AirportsController extends AppController
+class AirlinesController extends AppController
 {
-    public $paginate = [
-        'page' => 1,
+	public $paginate = [
+		'page' => 1,
         'limit' => 20,
         'maxLimit' => 100,
-        'fields' => [
-            'Airport_id', 'Name', 'city','Country', 'time_zone_area'
-        ],
+        /*'fields' => [
+             'Airline_ID', 'Name', 'Country'
+        ],*/
         'sortWhitelist' => [
-            'Airport_id', 'Name','Country'
+            'Airline_ID', 'Name', 'Country'
         ]
     ];
 	
