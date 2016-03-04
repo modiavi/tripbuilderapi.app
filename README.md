@@ -8,23 +8,33 @@ A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.x.
 The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
 
 ## Installation
+1.Download Entire Project
+2.Configure Database
+	1. This project has 3 tables/Models i.e.	Airports, Airlines, Routes and the relation between them is shown below
+		![Database Design EER Diagram](/tripbuilderapi_db_design.png)
 
-1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+	2. MySql file for the database tables is included 	[here](/tripbuilderapi_app_table_strucutre.sql)
 
-If Composer is installed globally, run
-```bash
-composer create-project --prefer-dist cakephp/app [app_name]
-```
+	3. Data for the tables is avaialble in csv format for [Airports](/airports.csv), [Airlines](/airlines.csv), [Routes](/routes_new.csv)
 
-You should now be able to visit the path to where you installed the app and see
-the setup traffic lights.
+3.In order to access the api's use the path 
+	1.[Airports](/tripbuilderapi.app/api/airports.json)
+	2.[Airlines](/tripbuilderapi.app/api/airlines.json)
+	3.[Routes](/tripbuilderapi.app/api/routes.json)
+	
+4. In order the access the frontend use the path
+	1.[Airports](/tripbuilderapi.app/api/airports)
+	2.[Airlines](/tripbuilderapi.app/api/airlines)
+	3.[Routes](/tripbuilderapi.app/api/routes)
+	
+5. Constraints
+	*Airports no new or delete constrain ie. post and delete will not work
+	pass sort in querystring e.g. "?sort=Name"
+		*sort by Airport_id, Name,Country
 
-## Configuration
+	*Airlines no new or delete constrain ie. post and delete will not work
+	pass sort in querystring e.g. "?sort=Name"
+		*sort by Airline_ID, Name,Country
 
-Read and edit `config/app.php` and setup the 'Datasources' and any other
-configuration relevant for your application.
-
-## Database Design
-
-![alt tag](/tripbuilderapi_db_design.png)
+	*Routes - Can perform all CRUD operations iff there is a coresponding airport and airline in airports and airlines table
+	
