@@ -10,13 +10,12 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 ## Installation
 1.Download Entire Project
 
-2.Configure Database
-	
-	1. This project has 3 tables/Models i.e.	Airports, Airlines, Routes and the relation between them is shown below ![Database Design EER Diagram](/tripbuilderapi_db_design.png)
+2.Configure Database	
+This project has 3 tables/Models i.e.	Airports, Airlines, Routes and the relation between them is shown below ![Database Design EER Diagram](/tripbuilderapi_db_design.png)
 
-	2. MySql file for the database tables is included 	[here](/tripbuilderapi_app_table_strucutre.sql)
+	1. MySql file for the database tables is included 	[here](/tripbuilderapi_app_table_strucutre.sql)
 
-	3. Data for the tables is avaialble in csv format for [Airports](/airports.csv), [Airlines](/airlines.csv), [Routes](/routes_new.csv)
+	2. Data for the tables is avaialble in csv format for [Airports](/airports.csv), [Airlines](/airlines.csv), [Routes](/routes_new.csv)
 
 3.In order to access the api's use the path 
 	1. [Airports](/tripbuilderapi.app/api/airports.json)
@@ -30,15 +29,18 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 	
 5. Constraints
 
-	* Airports no new or delete constrain ie. post and delete will not work
-	pass sort in querystring e.g. "?sort=Name"
+	* In Airports model, user cannot use post and delete request
 		
-		* sort by Airport_id, Name,Country
+		* For sorting the airports list user can pass sort as in querystring e.g. "?sort=Name"
+			
+			* User can sort by following parameters Airport_id, Name,Country
 
-	* Airlines no new or delete constrain ie. post and delete will not work
-	pass sort in querystring e.g. "?sort=Name"
+	* In Airlines model, user cannot use post and delete request
 		
-		* sort by Airline_ID, Name,Country
+		* For sorting the airports list user can pass sort as in querystring e.g. "?sort=Name"
+			
+			* User can sort by following parameters Airlines_id, Name,Country
 
-	* Routes - Can perform all CRUD operations iff there is a coresponding airport and airline in airports and airlines table
+
+	* In Routes model, user Can perform all CRUD operations iff there is a coresponding airport and airline in airports and airlines model
 	
